@@ -47,6 +47,10 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing.unit * 3,
   },
+  button: {
+    marginLeft: '10px',
+    marginRight: '10px'
+  }
 });
 
 class PermanentDrawer extends React.Component {
