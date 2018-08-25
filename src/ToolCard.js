@@ -16,7 +16,6 @@ export default class ToolCard extends React.Component {
             description: data.tools[props.id].description,
             link: data.tools[props.id].link,
         }
-
         this.websiteButtonClicked = this.websiteButtonClicked.bind(this);
     }
 
@@ -25,8 +24,24 @@ export default class ToolCard extends React.Component {
     }
 
     render() {
-        console.log(this.state.screenshot);
-        return (
+        var display = false;
+        var countChecked = 0;
+
+        for (var i = 0; i < this.props.filters[2].length; i++) {
+            if (this.props.filters[2][i].checked === true) {
+                if (this.state.region.indexOf(this.props.filters[2][i].name) > -1) {
+                    display = true;
+                }
+            } else {
+                countChecked += 1;
+            }
+        }
+
+        if (countChecked === this.props.filters[2].length) {
+            display = true;
+        }
+
+        var returnHTML = display ? (
             <Card className="tool-card">
                 <img src={process.env.PUBLIC_URL + this.state.screenshot} class="tool-image" alt="Default for tool website."/>
                 <CardContent className="tool-title">
@@ -47,6 +62,9 @@ export default class ToolCard extends React.Component {
                     </Button>
                 </CardActions>
             </Card>
-        )
+        ) : null;
+
+        console.log(this.state.screenshot);
+        return returnHTML;
     }
 }

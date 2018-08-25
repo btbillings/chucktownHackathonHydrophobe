@@ -10,6 +10,23 @@ import Filter from './Filter';
 import Button from '@material-ui/core/Button';
 
 class Sidebar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filters: ["", [], []],
+    }
+
+    this.updateFilters = this.updateFilters.bind(this);
+  }
+
+  updateFilters(newFilters) {
+    this.setState({
+      filters: newFilters,
+    })
+    console.log("HERE");
+    this.props.passSuperFilters(this.state.filters);
+  }
+
     render()
     {
         console.log(this.props);
@@ -25,7 +42,7 @@ class Sidebar extends Component {
         <Button variant="outlined" color="secondary" className={classes.button}>
         GUIDED FILTER
       </Button>
-      <Filter />
+      <Filter passSuperFilters={this.updateFilters}/>
       </Drawer>);
     }
 }
