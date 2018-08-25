@@ -7,6 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import InboxIcon from '@material-ui/icons/Inbox';
 import Filter from './Filter';
+import Button from '@material-ui/core/Button';
 
 class Sidebar extends Component {
     render()
