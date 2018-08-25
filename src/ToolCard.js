@@ -15,7 +15,8 @@ export default class ToolCard extends React.Component {
             description: data.tools[props.id].description,
             link: data.tools[props.id].link,
         }
-    this.websiteButtonClicked = this.websiteButtonClicked.bind(this);
+
+        this.websiteButtonClicked = this.websiteButtonClicked.bind(this);
     }
 
     websiteButtonClicked() {
@@ -23,8 +24,10 @@ export default class ToolCard extends React.Component {
     }
 
     render() {
+        console.log(this.state.screenshot);
         return (
-            <Card className="tool-card" classimage={this.state.screenshot}>
+            <Card className="tool-card">
+                <img src={process.env.PUBLIC_URL + this.state.screenshot} class="tool-image"/>
                 <CardContent className="tool-title">
                     <Typography variant="title" class="tool-title-text" app={this.state.app}>
                         <h1>{this.state.name}</h1>
