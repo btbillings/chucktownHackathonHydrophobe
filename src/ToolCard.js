@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as data from './contents.json';
+import OpenInBrowser from '@material-ui/icons/OpenInBrowser'
 import {Card, CardContent, Typography, CardActions, Button} from '@material-ui/core';
 import './stylesheet.css';
 
@@ -41,7 +42,9 @@ export default class ToolCard extends React.Component {
                     </Typography>
                 </CardContent>
                 <CardActions className="tool-links">
-                    <Button size="small" onClick={this.websiteButtonClicked} className="website-button">Website</Button>
+                    <Button size="small" onClick={this.websiteButtonClicked} className="website-button">
+                        Website<OpenInBrowser/>
+                    </Button>
                 </CardActions>
             </Card>
         )
