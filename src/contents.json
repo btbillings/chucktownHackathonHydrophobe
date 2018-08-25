@@ -1,7 +1,16 @@
 {
-    "name": "Coastal Flood Exposure Mapper",
-    "region": ["Daniel Island", "Isle of Palms", "James Island", "Johns Island", "Kiawah Island", "Mount Pleasant", "North Charleston", "Peninsula", "Seabrook Island", "Sol Legare Island", "Sullivans Island", "Wadamalaw Island", "West Ashley"],
-    "app": "Visualization",
-    "screenshot": "img/coastal_flood_exposure_map.png",
-    "descripton": "This tool provide a preliminary look at exposure to common types of coastal flooding. The viewer is a screening-level tool that uses nationally consistent data sets and analyses and should be used as such. Data and maps provided can be used at several scales to help gauge impacts and prioritize actions, but should be verified with a site visit."
+    "tools": [{
+        "name": "Coastal Flood Exposure Mapper",
+        "region": ["Daniel Island", "Isle of Palms", "James Island", "Johns Island", "Kiawah Island", "Mount Pleasant", "North Charleston", "Peninsula", "Seabrook Island", "Sol Legare Island", "Sullivans Island", "Wadamalaw Island", "West Ashley"],
+        "app": "Visualization",
+        "screenshot": "img/coastal_flood_exposure_map.png",
+        "descripton": "This tool provide a preliminary look at exposure to common types of coastal flooding. The viewer is a screening-level tool that uses nationally consistent data sets and analyses and should be used as such. Data and maps provided can be used at several scales to help gauge impacts and prioritize actions, but should be verified with a site visit."
+    },
+    {
+        "name": "",
+        "region": ["Daniel Island", "Isle of Palms", "James Island", "Johns Island", "Kiawah Island", "Mount Pleasant", "North Charleston", "Peninsula", "Seabrook Island", "Sol Legare Island", "Sullivans Island", "Wadamalaw Island", "West Ashley"],
+        "app": "",
+        "screenshot": "",
+        "descripton": ""
+    }]
 }
