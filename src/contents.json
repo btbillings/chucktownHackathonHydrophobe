@@ -5,7 +5,7 @@
         "name": "Coastal Flood Exposure Mapper",
         "region": ["Daniel Island", "Isle of Palms", "James Island", "Johns Island", "Kiawah Island", "Mount Pleasant", "North Charleston", "Peninsula", "Seabrook Island", "Sol Legare Island", "Sullivans Island", "Wadamalaw Island", "West Ashley"],
         "app": "Visualization",
-        "screenshot": "img/coastal_flood_exposure_map.png",
+        "screenshot": "./img/coastal_flood_exposure_map.png",
         "description": "This tool provide a preliminary look at exposure to common types of coastal flooding. The viewer is a screening-level tool that uses nationally consistent data sets and analyses and should be used as such. Data and maps provided can be used at several scales to help gauge impacts and prioritize actions, but should be verified with a site visit.",
         "link": "https://coast.noaa.gov/floodexposure/#/splash"
     },
@@ -13,7 +13,7 @@
         "name": "Sea Level Rise Viewer",
         "region": ["Daniel Island", "Isle of Palms", "James Island", "Johns Island", "Kiawah Island", "Mount Pleasant", "North Charleston", "Peninsula", "Seabrook Island", "Sol Legare Island", "Sullivans Island", "Wadamalaw Island", "West Ashley"],
         "app": "Visualization",
-        "screenshot": "img/sea_level_rise_viewer.png",
+        "screenshot": "./img/sea_level_rise_viewer.png",
         "description": "This tool provides a look at how sea level rise would affect the costal area in and around Charleston. With a changeable slide you can view what parts of the area would be flooded if sea level were to rise a given amount",
         "link": "https://coast.noaa.gov/slr/#/layer/slr/0/-8748160.559467208/3988745.1513586217/10/satellite/none/0.8/2050/interHigh/midAccretion"
     },
@@ -21,7 +21,7 @@
         "name": "Risk MAP",
         "region": ["Daniel Island", "Isle of Palms", "James Island", "Johns Island", "Kiawah Island", "Mount Pleasant", "North Charleston", "Peninsula", "Seabrook Island", "Sol Legare Island", "Sullivans Island", "Wadamalaw Island", "West Ashley"],
         "app": "Decision-Support",
-        "screenshot": "img/risk_map_planning.png",
+        "screenshot": "./img/risk_map_planning.png",
         "description": "This page discusses the Risk MAP program and what the program can mean to communities. This page is intended for a variety of audiences, including state and community officials; homeowners, renters and business owners; real estate, lending, insurance professionals; engineers, surveyors and architects.",
         "link": "https://www.fema.gov/risk-mapping-assessment-and-planning-risk-map"
     },
@@ -29,7 +29,7 @@
         "name": "Surging Seas Risk Finder",
         "region": ["Daniel Island", "Isle of Palms", "James Island", "Johns Island", "Kiawah Island", "Mount Pleasant", "North Charleston", "Peninsula", "Seabrook Island", "Sol Legare Island", "Sullivans Island", "Wadamalaw Island", "West Ashley"],
         "app": "Model",
-        "screenshot": "img/surging_seas_risk_finder.png",
+        "screenshot": "./img/surging_seas_risk_finder.png",
         "description": "This tool provides and look into the past and future with predictions on sea level risk and the hazards it would bring about. ",
         "link": "https://riskfinder.climatecentral.org/state/south-carolina.us?comparisonType=county&forecastType=NOAA2017_int_p50&level=5&unit=ft"
     }]
