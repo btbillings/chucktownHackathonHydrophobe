@@ -14,6 +14,7 @@ export default class ToolCard extends React.Component {
             description: data[props.id].description,
             link: data[props.id].link,
         }
+    this.websiteButtonClicked = this.websiteButtonClicked.bind(this);
     }
 
     websiteButtonClicked() {
@@ -34,7 +35,7 @@ export default class ToolCard extends React.Component {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small" onClick={this.websiteButtonClicked()}>Website</Button>
+                    <Button size="small" onClick={this.websiteButtonClicked}>Website</Button>
                 </CardActions>
             </CardMedia>
         )

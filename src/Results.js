@@ -24,7 +24,7 @@ class Results extends React.Component {
     return (
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Typography>
+        <Typography variant="display2" gutterBottom>
           {"Results"}
         </Typography>
         {cards}
