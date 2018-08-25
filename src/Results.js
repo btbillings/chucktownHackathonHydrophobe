@@ -8,7 +8,7 @@ class Results extends React.Component {
     let cards = [];
     for(let i = 0; i < 4; i++)
     {
-        cards[i] = <ToolCard id={i} />;
+        cards[i] = <ToolCard id={i} filters={this.props.filters}/>;
     }
     return (
       <main className={classes.content}>

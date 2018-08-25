@@ -53,9 +53,19 @@ const styles = theme => ({
 });
 
 class PermanentDrawer extends React.Component {
-  state = {
-    anchor: 'left',
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      anchor: 'left',
+      filters: ["", [], []],
+    };
+
+    this.updateFilters = this.updateFilters.bind(this);
+  }
+
+  updateFilters(newFilters) {
+    this.setState({filters: newFilters});
+  }
 
   handleChange = event => {
     this.setState({
@@ -81,8 +91,8 @@ console.log(classes);
               </Typography>
             </Toolbar>
           </AppBar>
-          <Sidebar classNames={classes} />
-          <Results classNames={classes} />
+          <Sidebar classNames={classes} passSuperFilters={this.updateFilters}/>
+          <Results classNames={classes} filters={this.state.filters}/>
         </div>
       </div>
     );

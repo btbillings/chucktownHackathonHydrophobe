@@ -1,5 +1,6 @@
 {
     "regions": ["Daniel Island", "Isle of Palms", "James Island", "Johns Island", "Kiawah Island", "Mount Pleasant", "North Charleston", "Peninsula", "Seabrook Island", "Sol Legare Island", "Sullivans Island", "Wadamalaw Island", "West Ashley"],
+    "apps": ["Decision-Support", "Model", "Visualization"],
     "tools": [
     {
         "name": "Coastal Flood Exposure Mapper",
