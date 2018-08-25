@@ -27,7 +27,7 @@ export default class ToolCard extends React.Component {
         console.log(this.state.screenshot);
         return (
             <Card className="tool-card">
-                <img src={process.env.PUBLIC_URL + this.state.screenshot} class="tool-image"/>
+                <img src={process.env.PUBLIC_URL + this.state.screenshot} class="tool-image" alt="Default for tool website."/>
                 <CardContent className="tool-title">
                     <Typography variant="title" class="tool-title-text" app={this.state.app}>
                         <h1>{this.state.name}</h1>
