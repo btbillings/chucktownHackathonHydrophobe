@@ -7,7 +7,7 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import Checkbox from "@material-ui/core/Checkbox";
-import * as data from './contents.json';
+import * as data from "./contents.json";
 
 const styles = theme => ({
   root: {
@@ -44,19 +44,20 @@ class Filter extends React.Component {
     const { classes } = this.props;
     const { gilad, jason, antoine } = this.state;
     //const error = Object.values(this.state).filter(v => v).length !== 2;
-    let filters = data.regions.map((region) =>
-{
-return (<FormControlLabel
-control={
-  <Checkbox
-    checked="false"
-    onChange={this.handleChange(region)}
-    value={region}
-  />
-}
-label={region}
-/>);
-})
+    let filters = data.regions.map(region => {
+      return (
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked="false"
+              onChange={this.handleChange(region)}
+              value={region}
+            />
+          }
+          label={region}
+        />
+      );
+    });
     return (
       <div>
         {this.props.guided ? (
@@ -67,30 +68,8 @@ label={region}
               <FormLabel component="legend">Regions</FormLabel>
               <FormGroup>
                 {filters}
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      checked={jason}
-                      onChange={this.handleChange("jason")}
-                      value="jason"
-                    />
-                  }
-                  label="Jason Killian"
-                />
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      checked={antoine}
-                      onChange={this.handleChange("antoine")}
-                      value="antoine"
-                    />
-                  }
-                  label="Antoine Llorca"
-                />
               </FormGroup>
-              <FormHelperText>Be careful</FormHelperText>
             </FormControl>
-           
           </div>
         )}
       </div>
