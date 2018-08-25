@@ -22,7 +22,7 @@ class Sidebar extends Component {
         }}
       >
         <div className={classes.toolbar} />
-        <Button variant="outlined" color="secondary" className={classes.button}>
+        <Button variant="outlined" color="secondary" onClick={(e) => alert('Help im stuck in here')} className={classes.button}>
         GUIDED FILTER
       </Button>
       <Filter />

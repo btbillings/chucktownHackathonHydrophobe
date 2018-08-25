@@ -25,6 +25,7 @@ class Filter extends React.Component {
       filters: ["", "", []]
     };
     this.state.selectedRegions = data.regions;
+    
   }
 
   passSuperFilters() {

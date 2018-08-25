@@ -7,6 +7,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Sidebar from './Sidebar';
 import Results from './Results';
+import Guided from './Guided';
 //import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 
 const drawerWidth = 240;
@@ -36,8 +37,11 @@ const styles = theme => ({
     position: 'relative',
     width: drawerWidth,
   },
-  toolbar: theme.mixins.toolbar,
+  toolbar: {
+    paddingTop: '10px'
+  }, //theme.mixins.toolbar,
   content: {
+    paddingTop: '64px',
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing.unit * 3,
@@ -60,6 +64,7 @@ class PermanentDrawer extends React.Component {
   };
 
   render() {
+    console.log(this.props);
     const { classes } = this.props;
     const { anchor } = this.state;
 console.log(classes);
