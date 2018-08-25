@@ -21,7 +21,16 @@ class Sidebar extends Component {
         }}
       >
         <div className={classes.toolbar} />
-        <List component="nav">
+        <Button variant="outlined" color="secondary" className={classes.button}>
+        GUIDED FILTER
+      </Button>
+      <Filter />
+      </Drawer>);
+    }
+}
+
+/*
+<List component="nav">
         <ListItem button>
           <ListItemIcon>
             <InboxIcon />
@@ -43,10 +52,5 @@ class Sidebar extends Component {
         <ListItem button component="a" href="#simple-list">
           <ListItemText primary="Spam" />
         </ListItem>
-      </List>
-      <Filter />
-      </Drawer>);
-    }
-}
-
+      </List>*/
 export default Sidebar;

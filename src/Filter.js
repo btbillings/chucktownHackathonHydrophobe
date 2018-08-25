@@ -24,6 +24,7 @@ class Filter extends React.Component {
       // filters: ["name", "type", ["region1", "region2",...]]
       filters: ["", "", []]
     };
+    this.state.selectedRegions = data.regions;
   }
 
   passSuperFilters() {
@@ -47,7 +48,7 @@ class Filter extends React.Component {
         <FormControlLabel
           control={
             <Checkbox
-              checked="false"
+              checked={this.state.selectedRegions[region]}
               onChange={this.handleChange(region)}
               value={region}
             />
