@@ -10,6 +10,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
+import Sidebar from './Sidebar';
+import Results from './Results';
 //import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 
 const drawerWidth = 240;
@@ -19,7 +21,7 @@ const styles = theme => ({
     flexGrow: 1,
   },
   appFrame: {
-    height: 440,
+    height: 800,
     zIndex: 1,
     overflow: 'hidden',
     position: 'relative',
@@ -61,45 +63,9 @@ class PermanentDrawer extends React.Component {
   render() {
     const { classes } = this.props;
     const { anchor } = this.state;
-
-    const drawer = (
-      <Drawer
-        variant="permanent"
-        classes={{
-          paper: classes.drawerPaper,
-        }}
-        anchor={anchor}
-      >
-        <div className={classes.toolbar} />
-        <Divider />
-        <List></List>
-        <Divider />
-        <List></List>
-      </Drawer>
-    );
-
-    let before = null;
-    let after = null;
-
-    if (anchor === 'left') {
-      before = drawer;
-    } else {
-      after = drawer;
-    }
-
+console.log(classes);
     return (
       <div className={classes.root}>
-        <TextField
-          id="permanent-anchor"
-          select
-          label="Anchor"
-          value={anchor}
-          onChange={this.handleChange}
-          margin="normal"
-        >
-          <MenuItem value="left">left</MenuItem>
-          <MenuItem value="right">right</MenuItem>
-        </TextField>
         <div className={classes.appFrame}>
           <AppBar
             position="absolute"
@@ -107,16 +73,12 @@ class PermanentDrawer extends React.Component {
           >
             <Toolbar>
               <Typography variant="title" color="inherit" noWrap>
-                Permanent drawer
+                Hydrophobe
               </Typography>
             </Toolbar>
           </AppBar>
-          {before}
-          <main className={classes.content}>
-            <div className={classes.toolbar} />
-            <Typography>{'You think water moves fast? You should see ice.'}</Typography>
-          </main>
-          {after}
+          <Sidebar classNames={classes} />
+          <Results classNames={classes} />
         </div>
       </div>
     );
