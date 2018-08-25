@@ -1,0 +1,74 @@
+* {
+    font-family: roboto;
+}
+
+.tool-card {
+    margin: 10px;
+    display: inline-block;
+    width: 40%;
+    height: 35%;
+    box-shadow: 5px 5px 10px gray !important;
+}
+
+.tool-title, .tool-details, .tool-links {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.tool-title, .tool-details, .tool-links {
+    display: inline-block;
+    width: 100%;
+}
+
+.tool-title {
+    height: 20%;
+}
+
+.tool-details {
+    margin: 5px 0px !important;
+    height: 60%;
+}
+
+.tool-links {
+    height: 20%;
+}
+
+.tool-title-text, .tool-details-text {
+    padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tool-title-text {
+    font-size: 10px;
+    color: white;
+}
+
+.tool-title-text[app="Visualization"] {
+    background-color: darkgreen;
+}
+
+.tool-title-text[app="Decision-Support"] {
+    background-color: darkgoldenrod;
+}
+
+.tool-title-text[app="Model"] {
+    background-color: darkblue;
+}
+
+.tool-details {
+    overflow-y: scroll !important;
+}
+
+.tool-links {
+    height: 10px;
+    text-align: center;
+}
+
+.website-button {
+    text-align: center;
+    margin: auto !important;
+    padding: 0px 10px !important;
+    box-sizing: border-box;
+    background-color: lightblue !important;
+}

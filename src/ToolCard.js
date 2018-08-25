@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as data from './contents.json';
-import {Card, CardContent, Typography, CardActions, CardMedia, Button} from '@material-ui/core';
+import {Card, CardContent, Typography, CardActions, Button} from '@material-ui/core';
+import './stylesheet.css';
 
 export default class ToolCard extends React.Component {
     constructor(props) {
@@ -23,21 +24,23 @@ export default class ToolCard extends React.Component {
 
     render() {
         return (
-            <CardMedia className="tool-card" image={this.state.screenshot}>
-                <CardContent>
-                    <Typography variant="title" className="tool-title">
+            <Card className="tool-card" classimage={this.state.screenshot}>
+                <CardContent className="tool-title">
+                    <Typography variant="title" class="tool-title-text" app={this.state.app}>
                         <h1>{this.state.name}</h1>
                     </Typography>
-                    <Typography variant="body1" className="tool-details">
-                        <p>Application Type: {this.state.app}</p>
-                        <p>Description: {this.state.description}</p>
-                        <p>Applicable Regions: {this.state.region.map((l) => {return l;})}</p>
+                </CardContent>
+                <CardContent className="tool-details">
+                    <Typography variant="body1" className="tool-details-text">
+                        <p><strong>Application Type</strong>: {this.state.app}</p>
+                        <p><strong>Description</strong>: {this.state.description}</p>
+                        <p><strong>Applicable Regions</strong>: {this.state.region.map((l) => {return l;}).join(", ")}</p>
                     </Typography>
                 </CardContent>
-                <CardActions>
-                    <Button size="small" onClick={this.websiteButtonClicked}>Website</Button>
+                <CardActions className="tool-links">
+                    <Button size="small" onClick={this.websiteButtonClicked} className="website-button">Website</Button>
                 </CardActions>
-            </CardMedia>
+            </Card>
         )
     }
 }
