@@ -24,24 +24,41 @@ export default class ToolCard extends React.Component {
     }
 
     render() {
-        var display = false;
-        var countChecked = 0;
+        var displayByApp = false;
+        var countCheckedApp = 0;
+
+        for (var i = 0; i < this.props.filters[1].length; i++) {
+            if (this.props.filters[1][i].checked === true) {
+                if (this.state.app === this.props.filters[1][i].name) {
+                    displayByApp = true;
+                }
+            } else {
+                countCheckedApp += 1;
+            }
+        }
+
+        if (countCheckedApp === this.props.filters[1].length) {
+            displayByApp = true;
+        }
+
+        var displayByRegion = false;
+        var countCheckedRegion = 0;
 
         for (var i = 0; i < this.props.filters[2].length; i++) {
             if (this.props.filters[2][i].checked === true) {
                 if (this.state.region.indexOf(this.props.filters[2][i].name) > -1) {
-                    display = true;
+                    displayByRegion = true;
                 }
             } else {
-                countChecked += 1;
+                countCheckedRegion += 1;
             }
         }
 
-        if (countChecked === this.props.filters[2].length) {
-            display = true;
+        if (countCheckedRegion === this.props.filters[2].length) {
+            displayByRegion = true;
         }
 
-        var returnHTML = display ? (
+        var returnHTML = (displayByApp && displayByRegion) ? (
             <Card className="tool-card">
                 <img src={process.env.PUBLIC_URL + this.state.screenshot} class="tool-image" alt="Default for tool website."/>
                 <CardContent className="tool-title">

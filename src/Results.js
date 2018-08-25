@@ -2,10 +2,6 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import ToolCard from "./ToolCard";
 class Results extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const classes = this.props.classNames;
     console.log(classes);
