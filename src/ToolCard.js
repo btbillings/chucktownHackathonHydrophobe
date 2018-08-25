@@ -1,6 +1,6 @@
 import * as React from 'react';
-import * as data from contents.json;
-import {Card, CardContent, Typography, CardActions, CardMedia} from '@material-ui/core';
+import * as data from './contents.json';
+import {Card, CardContent, Typography, CardActions, CardMedia, Button} from '@material-ui/core';
 
 export default class ToolCard extends React.Component {
     constructor(props) {
@@ -34,7 +34,7 @@ export default class ToolCard extends React.Component {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small" onClick={websiteButtonClicked()}>Website</Button>
+                    <Button size="small" onClick={this.websiteButtonClicked()}>Website</Button>
                 </CardActions>
             </CardMedia>
         )
