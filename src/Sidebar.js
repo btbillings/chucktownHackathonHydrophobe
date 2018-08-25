@@ -15,7 +15,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import InboxIcon from '@material-ui/icons/Inbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
-import CheckboxesGroup from './CheckboxesGroup';
+import Filter from './Filter';
 
 class Sidebar extends Component {
   constructor(props) {
@@ -57,7 +57,7 @@ class Sidebar extends Component {
           <ListItemText primary="Spam" />
         </ListItem>
       </List>
-      <CheckboxesGroup />
+      <Filter />
       </Drawer>);
     }
 }

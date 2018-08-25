@@ -1,4 +1,6 @@
-[
+{
+    "regions": ["Daniel Island", "Isle of Palms", "James Island", "Johns Island", "Kiawah Island", "Mount Pleasant", "North Charleston", "Peninsula", "Seabrook Island", "Sol Legare Island", "Sullivans Island", "Wadamalaw Island", "West Ashley"],
+    "tools": [
     {
         "name": "Coastal Flood Exposure Mapper",
         "region": ["Daniel Island", "Isle of Palms", "James Island", "Johns Island", "Kiawah Island", "Mount Pleasant", "North Charleston", "Peninsula", "Seabrook Island", "Sol Legare Island", "Sullivans Island", "Wadamalaw Island", "West Ashley"],
@@ -30,5 +32,5 @@
         "screenshot": "img/surging_seas_risk_finder.png",
         "description": "This tool provides and look into the past and future with predictions on sea level risk and the hazards it would bring about. ",
         "link": "https://riskfinder.climatecentral.org/state/south-carolina.us?comparisonType=county&forecastType=NOAA2017_int_p50&level=5&unit=ft"
-    }
-]
+    }]
+}

@@ -7,12 +7,12 @@ export default class ToolCard extends React.Component {
         super(props);
         this.state = {
             id: props.id,
-            name: data[props.id].name,
-            app: data[props.id].app,
-            region: data[props.id].region,
-            screenshot: data[props.id].screenshot,
-            description: data[props.id].description,
-            link: data[props.id].link,
+            name: data.tools[props.id].name,
+            app: data.tools[props.id].app,
+            region: data.tools[props.id].region,
+            screenshot: data.tools[props.id].screenshot,
+            description: data.tools[props.id].description,
+            link: data.tools[props.id].link,
         }
     this.websiteButtonClicked = this.websiteButtonClicked.bind(this);
     }
